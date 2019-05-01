@@ -36,5 +36,9 @@
   "docs": "https://github.com/Mariam13/jQuery-Multiselect#readme",
   "dependencies": {
     "bootstrap": "^4.3.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1"
   }
 }
