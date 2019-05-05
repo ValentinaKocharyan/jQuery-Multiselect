@@ -2,7 +2,7 @@
   "name": "jquery-multiselect",
   "version": "0.0.1",
   "description": "simple jquery-multiselect",
-  "main": "./js/ms_script.js",
+  "main": "src/js/ms_script.js",
   "keywords": [
     "jquery-plugin",
     "multiselect",
@@ -39,6 +39,9 @@
   },
   "devDependencies": {
     "grunt": "^1.0.4",
-    "grunt-contrib-concat": "^1.0.1"
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0"
   }
 }
