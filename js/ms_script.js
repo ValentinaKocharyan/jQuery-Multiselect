@@ -329,13 +329,11 @@ $('document').ready(function () {
                 lastScrollTop = scrollTop;
             });
         }
-    };
-});
 
-getItemsList = function (items, offset, iterationCount) {
-    for(let i = offset; i < iterationCount; i++) {
-        let currentItem = items[i];
-        $('.js-items-list').append(`<div class="list-grp js-list-item" data-id="${currentItem.id}">
+        function getItemsList(items, offset, iterationCount) {
+            for(let i = offset; i < iterationCount; i++) {
+                let currentItem = items[i];
+                $('.js-items-list').append(`<div class="list-grp js-list-item" data-id="${currentItem.id}">
                                     <div class="pure-checkbox">
                                         <div class="pure-checkbox-content position-relative">
                                             <img class="js-list-item-img" src="${currentItem.img_url}">
@@ -346,13 +344,13 @@ getItemsList = function (items, offset, iterationCount) {
                                         </div>
                                     </div>
                                 </div>`)
-    }
-};
+            }
+        }
 
-generateSelectedItemsList = function (items) {
-    for(let i = 0; i < items.length; i++) {
-        let currentItem = items[i];
-        $('.js-selected-list').append(`<div class="c-token d-flex justify-content-between js-selected-list-item" data-id="${currentItem.id}">
+        function generateSelectedItemsList(items) {
+            for(let i = 0; i < items.length; i++) {
+                let currentItem = items[i];
+                $('.js-selected-list').append(`<div class="c-token d-flex justify-content-between js-selected-list-item" data-id="${currentItem.id}">
                                           <span class="c-label align-self-center">
                                               <img class="js-selected-list-item-img" src="${currentItem.img_url}">
                                               <label class="js-selected-list-item-text">${currentItem.name}</label>
@@ -361,12 +359,12 @@ generateSelectedItemsList = function (items) {
                                               <i class="fas fa-times"></i>
                                           </span>
                                         </div>`);
-        $(`.js-list-item[data-id="${currentItem.id}"]`).addClass('active');
-    }
-};
+                $(`.js-list-item[data-id="${currentItem.id}"]`).addClass('active');
+            }
+        }
 
-addToSelectedList = function (item, itemsArr) {
-    $('.js-selected-list').append(`<div class="c-token d-flex justify-content-between js-selected-list-item" data-id="${item.id}">
+        function addToSelectedList(item, itemsArr) {
+            $('.js-selected-list').append(`<div class="c-token d-flex justify-content-between js-selected-list-item" data-id="${item.id}">
                                           <span class="c-label align-self-center">
                                               <img class="js-selected-list-item-img" src="${item.img_url}">
                                               <label class="js-selected-list-item-text">${item.name}</label>
@@ -375,10 +373,13 @@ addToSelectedList = function (item, itemsArr) {
                                               <i class="fas fa-times"></i>
                                           </span>
                                         </div>`);
-    itemsArr.push(item);
-};
+            itemsArr.push(item);
+        }
 
-deleteFromSelectedList = function(item, itemID, itemsArr) {
-    item.remove();
-    itemsArr.splice(itemsArr.findIndex(item => item.id === itemID), 1);
-};
+        function deleteFromSelectedList(item, itemID, itemsArr) {
+            item.remove();
+            itemsArr.splice(itemsArr.findIndex(item => item.id === itemID), 1);
+        }
+    };
+    $.fn.multiSelectInit();
+});
