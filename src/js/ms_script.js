@@ -381,5 +381,4 @@ $('document').ready(function () {
             itemsArr.splice(itemsArr.findIndex(item => item.id === itemID), 1);
         }
     };
-    $.fn.multiSelectInit();
 });
