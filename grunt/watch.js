@@ -1,5 +1,5 @@
 module.exports = {
-    watch: {
+    target: {
         files: ['<%= jshint.files %>'],
         tasks: ['jshint', 'concat', 'uglify']
     }

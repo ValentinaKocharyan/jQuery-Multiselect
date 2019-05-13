@@ -1,11 +1,11 @@
 module.exports = {
-    uglify: {
+    target: {
         options: {
             banner: '/*! <%= pkg.name %> <%= grunt.template.today() %> */\n'
         },
         dist: {
             files: {
-                'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+                'dist/ms_script.min.js': ['src/js/ms_script.js']
             }
         }
     }
