@@ -1,6 +1,6 @@
 module.exports = {
     target: {
-        files: ['<%= jshint.files %>'],
+        files: ['src/js/ms_script.js'],
         tasks: ['jshint', 'concat', 'uglify']
     }
 };

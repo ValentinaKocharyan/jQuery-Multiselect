@@ -34,17 +34,13 @@
   },
   "homepage": "https://github.com/Mariam13/jQuery-Multiselect#readme",
   "docs": "https://github.com/Mariam13/jQuery-Multiselect#readme",
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "grunt-generate-configs": "^0.6.1",
-    "install": "^0.12.2",
-    "npm": "^6.9.0"
-  },
   "devDependencies": {
     "grunt": "^1.0.4",
+    "bootstrap": "^4.3.1",
+    "grunt-generate-configs": "^0.6.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-jshint": "^2.1.0",
-    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
     "load-grunt-configs": "^1.0.0",
     "load-grunt-tasks": "^4.0.0"
